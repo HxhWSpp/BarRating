@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @foreach (var item in ViewData["counts"] as Dictionary<string , int>)
+    {
+        <h1>@item.Key : @item.Value</h1>
+    }
+    <a asp-controller="Users" asp-action="Index">To Users</a>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
